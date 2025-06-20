@@ -1,0 +1,16 @@
+{
+  "name": "WebGPU_Compute Simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "lint_format": "biome check --write sample"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.0",
+    "@webgpu/types": "^0.1.61"
+  }
+}
