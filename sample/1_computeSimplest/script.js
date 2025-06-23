@@ -9,7 +9,7 @@ async function init() {
   // バインド0に符号なし整数型のストレージ配列を定義する
   @binding(0) @group(0) var<storage, read_write> storageData:array<u32>;
 
-  // コンピュートシェーダーのメイン関数定義。ワークグループのスレッドサイズは8x1x1
+  // コンピュートシェーダーのメイン関数定義。ワークグループのスレッドサイズは8×1×1
   @compute @workgroup_size(8, 1, 1)
   fn main(
     // ビルトイン引数global_invocation_idをgidという名前で使用
@@ -48,7 +48,7 @@ async function init() {
   for (let i = 0; i < storageData.length; i++) {
     storageData[i] = Math.floor(Math.random() * 100);
   }
-  document.getElementById("input").innerText = `input: [${storageData}]`;
+  document.getElementById("input").textContent = `input: [${storageData}]`;
 
   // GPUで使用するバッファーを作る
   const storageBuffer = device.createBuffer({
@@ -113,7 +113,7 @@ async function init() {
   // マップ完了後、ArrayBufferを取得する
   const result = new Uint32Array(readbackBuffer.getMappedRange());
   // 計算結果を表示
-  document.getElementById("output").innerText = `output: [${result}]`;
+  document.getElementById("output").textContent = `output: [${result}]`;
   // バッファーをアンマップして再度GPUから使用可能にする
   readbackBuffer.unmap();
 }

@@ -20,7 +20,7 @@ async function init() {
   // バインド1に定数バッファーの構造体を定義する
   @binding(1) @group(0) var<uniform> uniformData:Uniform;
   
-  // コンピュートシェーダーのメイン関数定義。ワークグループのスレッドサイズは8x1x1
+  // コンピュートシェーダーのメイン関数定義。ワークグループのスレッドサイズは8×1×1
   @compute @workgroup_size(${count}, 1, 1)
   fn main(
     // ビルトイン引数global_invocation_idをgidという名前で使用
