@@ -78,7 +78,7 @@ const bindGroup = device.createBindGroup({
   ],
 });
 
-// コマンドを作成する
+// コマンドエンコーダーを作成する
 const commandEncoder = device.createCommandEncoder();
 
 // コマンド①：コンピュートシェーダーの実行

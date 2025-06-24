@@ -119,7 +119,7 @@ const frame = async (timestamp) => {
   uniformData[1] = window.innerHeight - radius;
   device.queue.writeBuffer(uniformBuffer, 0, uniformData);
 
-  // コマンドを作成する
+  // コマンドエンコーダーを作成する
   const commandEncoder = device.createCommandEncoder();
 
   // コマンド①：コンピュートシェーダーの実行
