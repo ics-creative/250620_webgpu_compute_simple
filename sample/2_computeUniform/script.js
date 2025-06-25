@@ -31,7 +31,7 @@ fn main(
 `;
 
 // createComputePipeline()でlayoutを"auto"にせず、
-// 本来自分で作成するべきGPUBindGroupLayout
+// 自分で作成する場合のGPUBindGroupLayout
 // const bindGroupLayout = device.createBindGroupLayout({
 //   entries: [
 //     {
@@ -53,7 +53,7 @@ fn main(
 
 // WGSLをコンパイルし、パイプラインを作成する
 const computePipeline = device.createComputePipeline({
-  layout: "auto",
+  layout: "auto", // layout: bindGroupLayout
   compute: {
     module: device.createShaderModule({ code: computeShaderWGSL }),
     entryPoint: "main",

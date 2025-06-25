@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="google" content="notranslate"/>
   <title>WebGPU Compute simple demo</title>
   <script type="module" src="script.js"></script>
@@ -16,17 +16,45 @@
       font-family: sans-serif;
     }
 
-    div#contents {
-      background-color: rgb(231, 231, 231);
-      padding: 20px;
+    .contents {
+      padding: 1rem;
+    }
+
+    .output-area {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .output-block {
+      flex: 1;
+    }
+
+    pre {
+      background: black;
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
     }
   </style>
 </head>
 
 <body>
-<div id="contents">
-  <div id="input"></div>
-  <div id="output"></div>
+<div class="contents">
+  <p>
+    JavaScriptで生成した配列の各要素に対して、WebGPUのコンピュートシェーダーで＋1の演算を行う。
+  </p>
+  <div class="output-area">
+    <div class="output-block">
+      <p>入力データ</p>
+      <pre id="input">input: [...]</pre>
+    </div>
+    <div class="output-block">
+      <p>出力データ</p>
+      <pre id="output">output: [...]</pre>
+    </div>
+  </div>
 </div>
 </body>
 
